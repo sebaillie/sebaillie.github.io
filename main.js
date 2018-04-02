@@ -2,7 +2,7 @@
 var grid = blankGrid();
 var w = canvas.width / 4;
 var score = 0;
-var highscore = 0;
+var highscore;
 
 window.onload = function() {
 	canvas = document.getElementById('canvas');
@@ -11,8 +11,10 @@ window.onload = function() {
 
 	if (highscore !== 0) {
 		highscore = (parseInt(localStorage.getItem("highScore")));
+	} else {
+		highscore = 0;
 	}
-	
+
 	addNumber();
 	addNumber();
 	updateCanvas();
