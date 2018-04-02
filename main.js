@@ -54,7 +54,7 @@ function keyPush(e) {
 		addNumber();
 		updateCanvas();
 		if (gameOver) {
-			console.log("GAME OVER");
+			showGameOver();
 		}
 		if (gameWon) {
 			console.log("GAME WON")
@@ -139,4 +139,5 @@ function newGame() {
 	addNumber();
 	addNumber();
 	updateCanvas();
+	hideGameOver();
 }

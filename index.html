@@ -7,7 +7,7 @@
 <body>
 	<div class="game">
 		<h1>2048</h1>
-		<button id="new_game" onclick="newGame()">New Game</button>
+		<button class="newgame" id="new_game" onclick="newGame()">New Game</button>
 		<div class="score">
 			SCORE:
 			<p id="score" class="score"></p>
@@ -22,8 +22,12 @@
 			<script type="text/javascript" src="config.js"></script>
 			<script type="text/javascript" src="movements.js"></script>
 	</div>
-	<div class="popup" onclick="gameIsOver()">ClickMe
-		<span class="popuptext" id="popuptext">Popup</span>
+	<div class="popup" id="gameOverPopup">
+		<div class="text">
+			<span style="background: none;">Game Over!</span><br>
+			<span class="gameOverScore" id="gameOverScore" style="font-size: 32px;"></span><br>
+			<span class="newHighscore" id="newHighscore">NEW HIGH SCORE</span>
+		</div>
 	</div>
 </body>
 </html>

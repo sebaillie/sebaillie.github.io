@@ -77,7 +77,16 @@ function ISgameWon() {
 	return false;
 }
 
-function gameIsOver() {
-	var popup = document.getElementById("popuptext");
-	popup.classList.toggle("show");
+function showGameOver() {
+    document.getElementById("gameOverPopup").style.visibility = "visible";
+    document.getElementById('gameOverScore').innerHTML = "SCORE: " + score;
+
+    if (score === highscore) {
+    	document.getElementById("newHighscore").style.visibility = "visible";
+    }
+}
+
+function hideGameOver() {
+    document.getElementById("gameOverPopup").style.visibility = "hidden";
+    document.getElementById("newHighscore").style.visibility = "hidden";
 }
