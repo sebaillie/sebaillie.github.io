@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2048</title>
+	<link rel="shortcut icon" href="usb.ico" />
+</head>
+<body>
+	<div class="game">
+		<h1>2048</h1>
+		<button id="new_game" onclick="newGame()">New Game</button>
+		<div class="score">
+			SCORE:
+			<p id="score" class="score"></p>
+		</div>
+		<div class="highscore">
+			HIGHSCORE:
+			<p id="highscore" class="highscore"></p>
+		</div>
+			<canvas id='canvas' width='400' height='400'></canvas>
+			<link rel="stylesheet" type="text/css" href="styles.css">
+			<script type="text/javascript" src="main.js"></script>
+			<script type="text/javascript" src="config.js"></script>
+			<script type="text/javascript" src="movements.js"></script>
+	</div>
+	<div class="popup" onclick="gameIsOver()">ClickMe
+		<span class="popuptext" id="popuptext">Popup</span>
+	</div>
+</body>
+</html>
