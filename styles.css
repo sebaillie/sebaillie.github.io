@@ -99,7 +99,13 @@ h1 {
 	font-size: 70px;
 	position:absolute;
 	top: 40px;
-	left: 0px;
+	left: -100px;
+}
+
+h6 {
+	position: absolute;
+	top: 77px;
+	left: 7px;
 }
 
 .text {

@@ -30,8 +30,8 @@ function combine(row) {
 		let b = row[i-1];
 		if (a == b) {
 			row[i] = a + b;
-			score += a + b
 			row[i-1] = 0;
+			score += a + b
 		}
 	}
 	return row;
@@ -44,6 +44,7 @@ function combine1(row) {
 		if (a == b) {
 			row[i] = 0;
 			row[i-1] = a + b;
+			score += a + b;
 		}
 	}
 	return row;

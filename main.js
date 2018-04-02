@@ -1,3 +1,4 @@
+
 var grid = blankGrid();
 var w = canvas.width / 4;
 var score = 0;
@@ -7,6 +8,12 @@ window.onload = function() {
 	canvas = document.getElementById('canvas');
 	ctx = canvas.getContext('2d');
 	document.addEventListener("keydown", keyPush);
+
+	if (parseInt(localStorage.getItem("highScore")) !== 0) {
+		highscore= (parseInt(localStorage.getItem("highScore")));
+	} else {
+		highscore = 0;
+	}
 
 	addNumber();
 	addNumber();
@@ -99,17 +106,19 @@ function blankGrid() {
 function updateCanvas() {
 	let past = copyGrid(grid);
 	let changed = compareGrid(past, grid);
-		ctx.fillStyle = "white";
-		ctx.fillRect(0, 0, canvas.width, canvas.height);
-		updateColors();
-		showText();
-		if (score >= highscore) {
-			highscore = score;
+	ctx.fillStyle = "white";
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+	updateColors();
+	showText();
+	if (score >= highscore) {
+		highscore = score;
+		if (typeof(Storage) !== "undefined") {
+    		localStorage.setItem("highScore", highscore);
 		}
-		document.getElementById('score').innerHTML = score;
-		document.getElementById('highscore').innerHTML = highscore;
-		createGrid();
-	
+	}
+	document.getElementById('score').innerHTML = score;
+	document.getElementById("highscore").innerHTML = parseInt(localStorage.getItem("highScore"));
+	createGrid();
 }
 
 function compareGrid(a, b) {
