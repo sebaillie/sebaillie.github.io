@@ -9,12 +9,10 @@ window.onload = function() {
 	ctx = canvas.getContext('2d');
 	document.addEventListener("keydown", keyPush);
 
-	if (parseInt(localStorage.getItem("highScore")) !== 0) {
-		highscore= (parseInt(localStorage.getItem("highScore")));
-	} else {
-		highscore = 0;
+	if (highscore !== 0) {
+		highscore = (parseInt(localStorage.getItem("highScore")));
 	}
-
+	
 	addNumber();
 	addNumber();
 	updateCanvas();
