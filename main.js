@@ -1,4 +1,4 @@
-
+var version = 1.22
 var grid = blankGrid();
 var w = canvas.width / 4;
 var score = 0;
