@@ -10,7 +10,7 @@ window.onload = function() {
 	document.addEventListener("keydown", keyPush);
 
 	if (highscore !== 0) {
-		highscore = (parseInt(localStorage.getItem("highScore")));
+		highscore = localStorage.getItem("highScore");
 	} else {
 		highscore = 0;
 	}
