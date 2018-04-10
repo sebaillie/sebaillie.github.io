@@ -8,6 +8,8 @@ window.onload = function() {
 	canvas = document.getElementById('canvas');
 	ctx = canvas.getContext('2d');
 	document.addEventListener("keydown", keyPush);
+	document.addEventListener('touchstart', handleTouchStart, false);        
+	document.addEventListener('touchmove', handleTouchMove, false);
 
 	if (highscore !== 0) {
 		highscore = localStorage.getItem("highScore");

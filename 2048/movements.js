@@ -91,3 +91,58 @@ function hideGameOver() {
     document.getElementById("gameOverPopup").style.visibility = "hidden";
     document.getElementById("newHighscore").style.visibility = "hidden";
 }
+
+// Phone playing
+
+var xDown = null;                                                        
+var yDown = null;                                                        
+
+function handleTouchStart(evt) {                                         
+    xDown = evt.touches[0].clientX;                                      
+    yDown = evt.touches[0].clientY;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( ! xDown || ! yDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            grid = rotateGrid();
+			for (let x = 0; x < 4; x++) {
+				grid[x] = slideUp(grid[x]);
+				grid[x] = combine1(grid[x]);
+			}
+			grid = rotateGrid();
+        } else {
+            grid = rotateGrid();
+			for (let x = 0; x < 4; x++) {
+				grid[x] = slideDown(grid[x]);
+				grid[x] = combine(grid[x]);
+			}
+			grid = rotateGrid();
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            for (let x = 0; x < 4; x++) {
+				grid[x] = slideUp(grid[x]);
+				grid[x] = combine1(grid[x]);
+			}
+        } else { 
+            for (let x = 0; x < 4; x++) {
+				grid[x] = slideDown(grid[x]);
+				grid[x] = combine(grid[x]);
+			}
+        }                                                                 
+    }
+    /* reset values */
+    xDown = null;
+    yDown = null;                                             
+};
