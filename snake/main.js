@@ -23,7 +23,7 @@ window.onload = function() {
 	initialize();
 
 	if (highscore !== "NaN") {
-		highscore = localStorage.getItem("highScore");
+		highscore = localStorage.getItem("hsSnake");
 	} else {
 		highscore = 0;
 	}
@@ -50,7 +50,7 @@ function resizeCanvas() {
 
 function game() {
 	document.getElementById('score').innerHTML = "SCORE: " + score;
-	document.getElementById('highscore').innerHTML = "BEST: " + parseInt(localStorage.getItem("highScore"));
+	document.getElementById('highscore').innerHTML = "BEST: " + parseInt(localStorage.getItem("hsSnake"));
 
 	snakeX += velX;
 	snakeY += velY;
@@ -99,7 +99,7 @@ function apple() {
 		if (score >= highscore) {
 				highscore = score;
 				if (typeof(Storage) !== "undefined") {
-					localStorage.setItem("highScore", highscore)
+					localStorage.setItem("hsSnake", highscore)
 				}
 			}
 	}
