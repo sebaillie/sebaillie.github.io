@@ -14,11 +14,11 @@ var gridSize = 20;
 var tileCount = 20;
 var score = 0;
 var highscore;
+var interval = setInterval(game, 1000/10);
 
 window.onload = function() {
 	canvas = document.getElementById('canvas');
 	ctx = canvas.getContext('2d');
-	setInterval(game, 1000/10);
 	document.addEventListener('keydown', keyPush);
 	initialize();
 
@@ -55,14 +55,18 @@ function game() {
 	snakeX += velX;
 	snakeY += velY;
 
-	if (snakeX > canvas.width / tileCount) {
-		snakeX = 0;
-	} else if (snakeX < 0) {
-		snakeX = canvas.width / tileCount;
-	} else if (snakeY > canvas.height / tileCount) {
-		snakeY = 0;
-	} else if (snakeY < 0) {
-		snakeY = canvas.height / tileCount;
+	if (snakeX > (canvas.width / tileCount - 1)) {
+		clearInterval(interval);
+		console.log("GMAE OVER");
+	} else if (snakeX < (-0.01)) {
+		clearInterval(interval);
+		console.log("GMAE OVER");
+	} else if (snakeY > (canvas.height / tileCount - 1)) {
+		clearInterval(interval);
+		console.log("GMAE OVER");
+	} else if (snakeY < (-0.01)) {
+		clearInterval(interval);
+		console.log("GMAE OVER");
 	}
 
 	background();
