@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hangman</title>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="functions.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body onload="setup()">
+  <h1>Hangman</h1>
+  <div id="game-container">
+    <canvas id='c' width='400' height='400'></canvas>
+    <div id="info">
+      <button id="newgame" onclick="newGame()">New Game</button>
+      <p id="lives"></p>
+      <p id="score"></p>
+   </div>
+   
+   <div id="own_words">
+      <span style="font-size: 15px; float: right">Add your own words here!</span><br>
+      <input type="text" id="text" maxlength="9" style="float:right">
+      <button id="submit" onclick="add()" style="float:right">Add</button><br>
+	  <span style="font-size: 9px; float: right">Max Word Length: 9 letters</span><br>
+	  <span style="display: none; color: green; float: right" id="word_added">Word Added!</span>
+	  <span style="display: none; color: red; float: right" id="word_error">Try another word.</span>
+    </div>
+	
+	<div id="items">
+		<p style="font-size: 15px; text-align: center; background: none">Possible Words</p>
+    <ul style="list-style-type: none">
+		  <li>hangman</li>
+    </ul>
+	</div>
+</body>
+</html>

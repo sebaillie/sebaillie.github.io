@@ -1,0 +1,99 @@
+* {
+  font-family: verdana, sans-serif;
+  background: rgb(230, 230, 230);
+}
+
+h1 {
+  transform: translate(-50%, 0);
+  position: absolute;
+  left: 50%;
+  top: -15px;
+}
+
+#game-container {
+  transform: translate(-50%, 0);
+  position: absolute;
+  left: 50%;
+  top: 50px;
+}
+
+#available-letters {
+  text-align: center;
+  width: 200px;
+  color: white;
+  background: black;
+  transform: translate(-50%);
+  position: absolute;
+  left: 50%;
+  border-radius: 5px;
+}
+
+canvas {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#newgame {
+  position: absolute;
+  top: 406px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#newgame:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+#lives {
+  position: absolute;
+  top: 415px;
+}
+
+#score {
+  position: absolute;
+  top: 430px;
+}
+
+#own_words {
+  float: right;
+}
+
+#submit {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#submit:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+#text {
+  width: 90px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#items {
+	width: 200px;
+	background: rgba(51, 51, 51, .5);
+	border-radius: 10px;
+	position: fixed;
+  left: 420px;
+	top: 0;
+}
+
+ul {
+	background: none;
+}
+
+li {
+	font-size: 11px;
+	background: none;
+}
