@@ -29,7 +29,7 @@ function keyPush(e) { // key push function from above
 				ctx.fillStyle = "black"
 				ctx.fillText(rword[i], 30 + (40 * i), 333);
 
-				takeout(key, arr);
+				// takeout(key, arr);
 
 				// score++;
 				// scoreCount.innerHTML = "Score: " + score;

@@ -29,8 +29,6 @@ window.onload = function() {
 	}
 }
 
-
-
 function initialize() {
 	window.addEventListener('resize', resizeCanvas, false);
 	snakeX = random(0, canvas.width / tileCount);

@@ -3,7 +3,7 @@ function add() {
 	var good = document.getElementById('word_added');
 	var bad = document.getElementById('word_error');
 	
-	if (/^[a-zA-Z]+$/.test(value)) { // checks all values in input if they are letters
+	if (/^[a-z]+$/.test(value)) { // checks all values in input if they are letters
 			good.style.display = 'block';
 			bad.style.display = 'none';
 			words.push(value);
