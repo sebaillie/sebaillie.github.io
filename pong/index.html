@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pong</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body onload="setup()">
+	<div id="game-container">
+		<canvas id="c" width="600" height="400"></canvas>
+		<span id="player2scored">Computer scored, restart?</span>
+		<button id="newgame" onclick="newGame()" style="display: none">New Game</button>
+		<span id="player1scored">You finally scored!</span>
+	</div>
+	<p id="score"></p>
+</body>
+</html>

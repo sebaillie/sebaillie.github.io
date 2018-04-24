@@ -1,0 +1,55 @@
+* {
+	font-family: Verdana, sans-serif;
+	background: rgb(150, 150, 150);
+}
+
+#game-container {
+	width: 600px;
+	transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+}
+
+canvas {
+	border: 2px solid white;
+	border-radius: 10px;
+}
+
+button {
+	border: 2px solid white;
+	background: black;
+	color: white;
+	border-radius: 5px;
+	width: 100px;
+	height: 25px;
+}
+
+button:hover {
+	border: 2px solid black;
+	background: white;
+	color: black;
+}
+
+#newgame {
+	transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	top: 405px;
+}
+
+#player2scored {
+	display: none;
+	color: red;
+	transform: translateX(-50%);
+	position: absolute;
+	left: 75%;
+	top: 410px;
+}
+
+#player1scored {
+	display: none;
+	color: blue;
+	transform: translateX(-50%);
+	left: 25px;
+	top: 410px;
+}
