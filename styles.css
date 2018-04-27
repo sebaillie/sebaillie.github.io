@@ -1,60 +1,105 @@
 * {
-	font-family: arial;
+	font-family: Verdana, sans-serif;
+	background-color: rgb(230,230,250);
+}
+
+#container {
+	transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	margin-top: 0px;
+	padding-top: 0px;
+	width: 1000px;
+	background-color: white;
+	box-shadow: 5px 0px 15px;
+	min-height: 850px;
+	z-index: 10;
+}
+
+#header {
+	position: sticky;
+	top: 0px;
+}
+
+/* GRID ITEMS FOR GAMES */
+
+.grid-container {
+	display: inline-grid;
+  	grid-column-gap: 10px;
+  	grid-row-gap: 10px;
+  	grid-template-columns: auto auto auto;
+  	background: none;
+  	padding: 0px;
+  	position: absolute;
+  	transform: translateX(-50%);
+  	left: 50%;
+  	top: 300px;
+  	z-index: -1;
+}
+
+.grid-item {
+	background-color: rgba(245, 245, 245, 0.8);
+  	border: 1px solid black;
+  	padding: 20px;
+  	color: black;
+  	font-size: 20px;
+  	text-align: center;
+  	width: 200px;
+  	height: 200px;
+}
+
+.grid-item:hover {
+	box-shadow: 2px 2px 15px black;
+}
+
+canvas {
+	border: 3px solid;
+	
+}
+
+/* NAVIGATION */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #333;
+}
+
+li a:hover {
+    background-color: #111;
 }
 
 h1 {
-	text-align: center;
+	background: none;
+	font-size: 40px;
+	padding-left: 30px;
 }
 
-.projects {
-	transform: translate(-50%, -50%);
-	width: 350px;
-	height: 350px;
-	border: 3px solid black;
-	border-radius: 10px;
-	background-color: rgb(120, 120, 120);
-	position: fixed;
-	left: 50%;
-	top: 250px;
+a {
+	background: none;
+	text-decoration: none;
 }
 
-h2 {
-	text-align: center;
-	font-size: 30px;
+li a.active {
+	background-color: rgb(180, 180, 180);
+	color: black;
 }
 
-.item {
-	transform: translate(-50%, -50%);
-		position: absolute;
-	background-color: black;
-	color: white;
-	width: 140px;
-	height: 140px;
-	border: 1px solid white;
-	border-radius: 5px;
-}
-
-.item:hover {
-	background-color: rgb(51, 51, 51);
-	width: 145px;
-	height: 145px;
-}
-
-.snake {
-	position: absolute;
-	left: 95px;
-	bottom: 60px;
-}
-
-.twenty {
-	position: absolute;
-	left: 255px;
-	bottom: 60px;
-}
-
-p {	
-	font-size: 200%;
-	transform: translate(-50%, -50%);
-	position: absolute;
-	left: 50%;
+hr {
+	border-color: black;
 }

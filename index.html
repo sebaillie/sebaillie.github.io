@@ -3,21 +3,47 @@
 <head>
 	<title>sebaillie homepage</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<h1>games made by seabass</h1>
+	<script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-	<div class="projects">
-		<h2>Games</h2>
-		<a href="https://sebaillie.github.io/snake/">
-			<div class="item snake">
-				<p>Snake</p>
-			</div>
-		</a>
-		<a style="display: block" href="https://sebaillie.github.io/2048/">
-			<div class="item twenty">
-				<p>2048</p>
-			</div>
-		</a>
+
+	<div id='container'>
+		<div id="header">
+			<canvas id="canvas" width="997" height="100"></canvas>
+			<ul>
+				<li><a href="https://sebaillie.github.io/" class="active">Games</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>
+		<h1>Games</h1>
+		<hr>
+		<div class='grid-container'>
+			<a href="https://sebaillie.github.io/snake/">
+				<div class="grid-item">
+					Snake
+					<hr>
+				</div>
+			</a>
+			<a href="https://sebaillie.github.io/pong/">
+				<div class="grid-item">
+					Pong
+					<hr>
+				</div>
+			</a>
+			<a href="https://sebaillie.github.io/hangman/">
+				<div class="grid-item">
+					Hangman
+					<hr>
+				</div>
+			</a>
+			<a href="https://sebaillie.github.io/2048/">
+				<div class="grid-item">
+					2048
+					<hr>
+				</div>
+			</a>
+		</div>
 	</div>
 </body>
 </html>

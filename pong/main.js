@@ -119,7 +119,7 @@ function Piece(x, y, w, h) {
 				if (ball.velY < 0) {
 					ball.velY = -ball.velY + randomVel(-2,2);
 				}
-		} else if ((myLeft < objRight) &&
+		} else if ((myLeft < objRight) && // hitting middle
 					(myTop > objTop) &&
 					(myBottom < objBottom)) {
 			//console.log('middle');
@@ -155,7 +155,7 @@ function Piece(x, y, w, h) {
 				if (ball.velY < 0) {
 					ball.velY = -ball.velY + randomVel(-2,2);
 				}
-		} else if ((myRight > objLeft) && //Hitting Bottom Half
+		} else if ((myRight > objLeft) && //Hitting Middle
 			(myTop > objTop) &&
 			(myBottom < objBottom)) {
 				
