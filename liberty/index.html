@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Liberty: Wild West</title>
+	<!-- STYLE SHEETS -->
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/mainMenu.css">
+	<link rel="stylesheet" type="text/css" href="css/navigationStyles.css">
+	<link rel="stylesheet" type="text/css" href="css/inventory.css">
+	<link rel="stylesheet" type="text/css" href="css/map.css">
+	<link rel="stylesheet" type="text/css" href="css/river.css">
+	<link rel="stylesheet" type="text/css" href="css/saloon.css">
+	<link rel="stylesheet" type="text/css" href="css/arena.css">
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="script/startingGame.js"></script>
+	<script type="text/javascript" src="script/navigation.js"></script>
+	<script type="text/javascript" src="script/equipGuns.js"></script>
+	<script type="text/javascript" src="script/goToMapPlaces.js"></script>
+	<script type="text/javascript" src="script/river.js"></script>
+	<script type="text/javascript" src="script/saloon.js"></script>
+</head>
+<body>
+	<div id="mainMenu">
+		<embed id="title" class="embed" src="places/title.txt">
+		<div class="button startGame" onclick="startGame()">Start Game</div>
+		<div class="button about" onclick="about()">About</div>
+	</div>
+
+	<div id="game" style="display: none">
+		<div id="navigationBar">
+			<span id="goldAmount">Gold: 0</span>
+			<span id="healthAmount">Health: 100</span>
+			<div id="healthHolder">
+				<div id="healthBar"></div>
+			</div>
+			<div class="button homeButton" id="homeButton" onclick="goToHome()">HOME</div>
+			<div class="button inventoryButton" id="inventoryButton" onclick="goToInventory()">INV<br>ENT<br>ORY</div>
+			<div class="button mapButton" id="mapButton" onclick="goToMap()">MAP</div>
+			<div class="button configButton" id="configButton" onclick="goToConfig()">CONFIG</div>
+		</div>
+
+		<!-- HOME TAB -->
+		<div class="tab" id="homeTab">
+			<span class="statsTitle">STATS</span><br>
+			<div class="equippedGun statsBlock">
+				<span class="statsBlockTitle">EQUIPPED GUN</span><br>
+				<span id="gunName">Equipped Gun: none</span><br>
+				<span id="gunDamage">Max Damage: 0</span><br>
+				<span id="goldWinAmount">Gold per kill: 0</span><br>
+				<span id="goldTakeAmount">Gold lost per death: 0</span><br>
+			</div>
+		</div>
+
+		<!-- INVENTORY TAB -->
+		<div class="tab" id="inventoryTab" style="display: none;">
+			<embed id="inventoryTitle" class="embed" src="places/inventory.txt">
+			<embed id="inventorySlingShot" class="embed" src="guns&players/slingShot.txt" style="display: none;">
+			<embed id="inventoryNerfGun" class="embed" src="guns&players/nerfGun.txt" style="display: none;">
+			<embed id="inventoryGreenPistol" class="embed" src="guns&players/greenPistol.txt" style="display: none;">
+			<embed id="inventoryRevolver" class="embed" src="guns&players/revolver.txt" style="display: none;">
+
+			<div class="button" id="equipSlingShot" onclick="equipSlingShot()" style="display: none;">Equip Sling Shot</div>
+			<div class="button" id="equipNerfGun" onclick="equipNerfGun()" style="display: none;">Equip Nerf Gun</div>
+			<div class="button" id="equipGreenPistol" onclick="equipGreenPistol()" style="display: none;">Equip Green Pistol</div>
+			<div class="button" id="equipRevolver" onclick="equipRevolver()" style="display: none;">Equip Revolver</div>
+		</div>
+
+		<!-- MAP TAB -->
+		<div class="tab" id="mapTab" style="display: none;">
+			<embed class="placeHolders" class="embed" src="places/map.txt">
+			<div class="placeHolders">
+				<div class="place saloonButton" onclick="goToSaloon()"></div>
+				<div class="place churchButton" onclick="goToChurch()"></div>
+				<div class="place stablesButton" onclick="goToStables()"></div>
+				<div class="place riverButton" onclick="goToRiver()"></div>
+				<div class="place mineButton" onclick="goToMine()"></div>
+			</div>
+		</div>
+
+		<!-- CONFIG TAB -->
+		<div class="tab" id="configTab" style="display: none;">
+			config
+		</div>
+
+		<!-- PLACES FOR THE MAP -->
+		<div id="mine" class="room" style="display: none">
+			<embed class="embed mineMap" src="places/mine.txt">
+			<embed id="playerMine" src="guns&players/playerAxe.txt">
+			<div class="button" id="goldGetter" onclick="mine()" style="display: none;">MINE</div>
+		</div>
+
+		<div id="saloon" class="room" style="display: none">
+			<embed class="embed saloonMap" src="places/saloon.txt">
+			<div class="dialogue saloonDialogue" id="welcomeSaloon">Howdy partn'r! The names Pesky Pat! What can I do for ya today?</div>
+			<div class="dialogue saloonDialogue" id="whatIsThisPlace" style="display: none;">This here is a lonely town in the West, full of bandits.  We really could use your help scarin' them off, cowboy. Whatya say?</div>
+			<div class="dialogue saloonDialogue" id="howToLeave" style="display: none;">Just north of here are some stables you can buy a horse at.  Then use that horse to get out of this town and find a better life. Simple, really.</div>
+			<div class="dialogue saloonDialogue" id="errorFight" style="display: none;">Oof! Sorry, partn'r, but you don't have a gun to fight with! Head over to River Rick's under the bridge and pick up one for cheap!</div>
+			<div class="button saloonOptions what" onclick="whatIsThisPlace()">What is this place?</div>
+			<div class="button saloonOptions how" onclick="howToLeave()">How do I leave?</div>
+			<div class="button saloonOptions fight" onclick="fight()">I want to fight!</div>
+		</div>
+
+		<div id="stables" class="room" style="display: none">
+			<embed class="embed stablesMap" src="places/stables.txt">
+			<div class="button buyHorse" onclick="buyHorse()">BUY HORSE --- 15000 gold</div>
+		</div>
+
+		<div id="river" class="room" style="display: none">
+			<embed class="embed riverMap" src="places/river.txt">
+			<div class="dialogue riverDialogue" id="welcomeRiver">Lemme guess, you're here so you can kill bandits? Er, I mean, I'm River Rick.  I sell quality guns at a low price. What can I getcha?</div>
+			<div class="dialogue riverDialogue" id="oofRiver" style="display: none;">Oof! Sorry, cowboy, but you ain't got enough gold to buy that item! Go visit the mine to grab some quick gold.</div>
+			<div class="dialogue riverDialogue" id="purchaseRiver" style="display: none;">Aaah great choice, come back again soon for your next gun purchase.  Good luck, cowboy.</div>
+			<div class="button riverOptions" id="riverSlingShot" onclick="buySlingShot()">Buy Sling Shot -- 100 gold</div>
+			<div class="button riverOptions" id="riverNerfGun" onclick="buyNerfGun()">Buy Nerf Gun --- 935 gold</div>
+			<div class="button riverOptions" id="riverGreenPistol" onclick="buyGreenPistol()">Buy Green Pistol --- 2712 gold</div>
+			<div class="button riverOptions" id="riverRevolver" onclick="buyRevolver()">Buy Revolver --- 6666 gold</div>
+		</div>
+
+		<div id="arena" class="room" style="display: none;">
+			<embed class="embed arenaMap" src="places/arena.txt">
+			<div class="button shootButton" id="shootButton" onclick="shoot()">SHOOT</div>
+			<span id="enemyHealthAmount">Bandit Health: 100</span>
+			<div id="enemyHealthHolder">
+				<div id="enemyHealthBar"></div>
+			</div>
+			<div class="button speedPlayButton" id="speedPlayButton" onclick="speedRestart()" style="display: none;">Go to church and restart</div>
+		</div>
+
+		<div id="gameOver" class="room" style="display: none;">
+			<embed class="embed gameOverMap" src="places/gameOver.txt">
+		</div>
+	</div>
+</body>
+</html>

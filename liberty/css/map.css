@@ -1,0 +1,135 @@
+.placeHolders {
+	transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	top: 120px;
+	width: 1300px;
+	height: 550px;
+}
+
+.place {
+	transform: translateX(-50%);
+	position: absolute;
+}
+
+.place:hover {
+	cursor: pointer;
+}
+
+.saloonButton {
+	width: 160px;
+	height: 110px;
+	left: 120px;
+	top: 95px;
+}
+
+.churchButton {
+	width: 260px;
+	height: 200px;
+	left: 420px;
+	top: 5px;
+}
+
+.stablesButton {
+	width: 160px;
+	height: 110px;
+	left: 210px;
+	top: 300px;
+}
+
+.riverButton {
+	width: 30px;
+	height: 30px;
+	left: 848px;
+	top: 285px;
+}
+
+.mineButton {
+	width: 160px;
+	height: 110px;
+	left: 670px;
+	top: 95px;
+}
+
+
+/* INDIVIDUAL PLACES */
+
+#saloon {
+	left: 50%;
+	top: 120px;
+	width: 700px;
+	height: 500px;
+}
+
+.saloonMap {
+	left: 50%;
+	width: 600px;
+	height: 450px;
+}
+
+#mine {
+	left: 50%;
+	top: 120px;
+	width: 340px;
+	height: 290px;
+}
+
+.mineMap {
+	left: 50%;
+	width: 340px;
+	height: 290px;
+}
+
+#playerMine {
+	position: absolute;
+	width: 80px;
+	height: 40px;
+	bottom: 25px;
+	left: 20px;
+}
+
+#goldGetter {
+	left: 145px;
+	top: 200px;
+}
+
+#river {
+	left: 50%;
+	top: 120px;
+	width: 1000px;
+	height: 550px;
+}
+
+.riverMap {
+	left: 50%;
+	width: 1000px;
+	height: 550px;
+}
+
+#arena {
+	left: 50%;
+	top: 220px;
+	width: 500px;
+	height: 300px;
+}
+
+.arenaMap {
+	left: 50%;
+	width: 500px;
+	height: 300px;
+}
+
+#stables {
+	left: 50%;
+	top: 120px;
+}
+
+.stablesMap {
+	width: 760px;
+	height: 350px;
+}
+
+.buyHorse {
+	width: 200px;
+	top: 275px;
+}

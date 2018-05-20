@@ -1,0 +1,69 @@
+#title {
+	width: 420px;
+	height:170px;
+	left: 50%;
+	top: 20px;
+}
+
+.startGame {
+	left: 40%;
+	top: 400px;
+	width: 100px;
+	height: 100px;
+}
+
+.about {
+	left: 60%;
+	top: 400px;
+	width: 100px;
+	height: 100px;
+}
+
+
+
+/*	home Tab */
+
+#homeTab {
+	transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	top: 120px;
+	width: 800px;
+	height: 400px;
+	text-align: center;
+}
+
+.statsBlock {
+	transform: translateX(-50%);
+	position: absolute;
+	border: 1px solid black;
+	border-radius: 10px;
+	height: auto;
+}
+
+.statsTitle {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.statsBlockTitle {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.equippedGun {
+	width: 200px;
+	left: 50%;
+}
+
+/* GAME OVER SCREEN */
+
+#gameOver {
+	top: 120px;
+	left: 50%;
+}
+
+.gameOverMap {
+	width: 700px;
+	height: 270px;
+}

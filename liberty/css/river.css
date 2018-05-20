@@ -1,0 +1,31 @@
+.riverOptions {
+	width: 200px;
+	height: auto;
+}
+
+#riverSlingShot {
+	top: 145px;
+	left: 75%;
+}
+
+#riverNerfGun {
+	top: 180px;
+	left: 75%;
+}
+
+#riverGreenPistol {
+	top: 215px;
+	left: 75%;
+}
+
+#riverRevolver {
+	top: 250px;
+	left: 75%;
+}
+
+.riverDialogue {
+	width: 175px;
+	height: auto;
+	top: 130px;
+	left: 35%;
+}

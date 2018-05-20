@@ -1,0 +1,26 @@
+.saloonOptions {
+	width: 200px;
+	height: auto;	
+}
+
+.what {
+	top: 85px;
+	left: 70%;
+}
+
+.how {
+	top: 120px;
+	left: 70%;
+}
+
+.fight {
+	top: 155px;
+	left: 70%;
+}
+
+.saloonDialogue {
+	width: 175px;
+	height: auto;
+	top: 70px;
+	left: 25%;
+}

@@ -1,0 +1,54 @@
+#inventoryTitle {
+	width: 570px;
+	height: 160px;
+	left: 50%;
+	top: 120px;
+}
+
+#inventorySlingShot {
+	left: 25%;
+	top: 260px;
+	width: 176px;
+	height: 200px;
+}
+
+#equipSlingShot {
+	left: 25%;
+	top: 450px;
+}
+
+#inventoryNerfGun {
+	left: 42%;
+	top: 300px;
+	height: 115px;
+	width: 290px;
+}
+
+#equipNerfGun {
+	left: 42%;
+	top: 450px;
+}
+
+#inventoryGreenPistol {
+	left: 59%;
+	top: 300px;
+	width: 140px;
+	height: 100px;
+}
+
+#equipGreenPistol {
+	left: 59%;
+	top: 450px;
+}
+
+#inventoryRevolver {
+	left: 75%;
+	top: 300px;
+	width: 195px;
+	height: 115px;
+}
+
+#equipRevolver {
+	left: 75%;
+	top: 450px;
+}
