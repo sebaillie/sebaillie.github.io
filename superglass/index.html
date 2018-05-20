@@ -9,25 +9,29 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src="main.js"></script>
 </head>
+
 <body>
 	<div id="top">
 		<div id="navigation">
 			<img src="logo.png" alt="SuperGlass Windshield Repair">
 			<ul>
 				<li><a href="index.html">HOME</a></li>
-				<li><a href="#">CONTACT US</a></li>
+				<li><a href="#hello">CONTACT US</a></li>
 				<li><a href="#">ABOUT</a></li>
 			</ul>
 		</div>
 	</div>
+
 	<div id="presenter">
 		<img id="blurred" src="nebraska.jpg" alt="The Good Life">
 		<img id="crack" src="crack.png" alt="Crack">
 		<p id="we-fix-these"><strong>WE FIX<br>THESE...</strong></p>
 		<p id="better-than"><strong>BETTER THAN ANYBODY</strong></p>
 	</div>
+
+	<span id="service-loc"></span>
 	<div id='services'>
-		<p id="our">OUR SERVICES</p>
+		<span id="our">OUR <strong>SERVICES</strong></span>
 		<hr>
 		<div id="items">
 			<div id="block">
@@ -44,5 +48,27 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="video-container">
+		<p>Here's is a video of our work in action:</p>
+		<video width="640" height="360" controls>
+			<source src="superglass.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+
+	</div>
+
+	<a href="#presenter" id="to-top-button">
+		<div id="to-top">
+			<img src="home.png">
+		</div>
+	</a>
 </body>
+
+<footer>
+	<div id="foot">
+		<p>SUPERGLASS NEBRASKA WINDSHIELD REPAIR &copy;.  ALL RIGHTS RESERVED.</p>
+		<img src="logo.png" alt="SuperGlass Windshield Repair">
+	</div>
+</footer>
 </html>
