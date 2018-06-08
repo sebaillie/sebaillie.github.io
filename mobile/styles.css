@@ -1,0 +1,49 @@
+* {
+	font-family: Verdana, sans-serif;
+	background-color: rgb(235,235,235);
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 10px;
+	background: none;
+	padding: 10px;
+}
+
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+	height: auto;
+	text-indent: 20px;
+	font-size: 30px;
+	border-radius: 10px;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2), 0 6px 5px 0 rgba(0,0,0,0.19);
+}
+
+.item-title {
+	background: none;
+	font-size: 25px;
+	padding-top: 10px;
+}
+
+.item-title a {
+	background: none;
+	text-decoration: none;
+}
+
+.item-website {
+	background: none;
+	font-size: 15px;
+	color: green;
+}
+
+.item-description {
+	background: none;
+	font-size: 20px;
+	position: relative;
+	top: -7px;
+}
+
+hr {
+	width: 95%;
+}
