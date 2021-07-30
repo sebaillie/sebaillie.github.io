@@ -1,0 +1,108 @@
+Question,Answer
+IDS,Intrusion Detection System
+NIDS,Network Intrusion Detection System
+NIPS,Network Intrusion Prevention System
+SIEM,Security Information and Event Management
+Radius,Remote Authentication Dial-In User Service
+IPSec,Internet Protocol Security
+ADC,Application Delivery Controller
+SPAN,Switched Port Analyzer
+TAP,Test Access Points
+SDN,Software Defined Network Software
+DMZ,Demilitarized Zone
+RAT,Remote Access Trojan
+DoS,Denial of Service
+DDoS,Distributed Denial of Service
+MITM,Man-in-the-Middle
+XSS,Cross-Site Scripting
+XSRF,cross-site request forgery
+ARP,Address Resolution Protocol
+MAC,Media Access Control
+WPS,Wi-Fi Protected Setup
+RFID,Radio Frequency Identification
+NFC,Near Field Communication
+APT,Advanced Persistent Threat
+OSINT,Open-Source Intelligence
+OVAL,Open Vulnerability Assessment Language
+EOL,End of Life
+DLL,Dynamic Link Libraries
+ACL,Access Control List
+AH,Authentication Header
+DLP,Data Loss Prevention
+ESP,Encapsulating Security Payload
+HSM,Hardware Security Module
+IPSec,Internet Protocol Security
+IDS,Intrusion Detection System
+NIDS,Network-based Intrusion Detection System
+NIPS,Network-based Intrusion Prevention System
+TLS,Transport Layer Security
+VLAN,Virtual Local Area Network
+VPN,Virtual Private Network
+ARP,Address Resolution Protocol
+DEP,Data Execution Prevention
+HIDS,Host-based IDS
+HIPS,Host-based IPS
+WAF,Web Application Firewall
+BYOD,Bring Your Own Device
+CYOD,Choose Your Own Device
+COPE,Corporate Owned Personally Enabled
+POTS,Plain Old Telephone Service
+SMS,Short Message Service
+DNS,Domain Name Service
+FTP,File Transfer Protocol
+HTTP,Hypertext Transfer Protocol
+HTTPS,Hypertext Transfer Protocol over Secure Socket Layer
+LDAP,Lightweight Directory Access Protocol
+NTP,Network Time Protocol
+S-HTTP,Secure Hypertext Transfer Protocol
+S/MIME,Secure Multipurpose Internet Mail Extensions
+SSH,Secure Shell
+SSL,Secure Socket Layer
+SNMP,Simple Network Management Protocol
+VoIP,Voice over IP
+ISO,International Organization for Standardization
+NIST,National Institute of Standards and Technology
+EMI,Electromagnetic Interference
+EMP,Electromagnetic Pulse
+SED,Self-Encrypting Drive
+TPM,Trusted Platform Module
+UEFI,Unified Extensible Firmware Interface
+HMAC,Hash-based Message Authentication Code
+PCBC,Propagating Cipher Block Chaining
+CBC,Cipher Block Chaining
+GCM,Galois Counter Mode
+MDM,Mobile Device Management
+CRTM,Core-Root-of-Trust Measurement
+IaC,Infrastructure as code
+IaaS,Infrastructure as a Service
+PaaS,Platform as as Service
+SaaS,Software as a Service
+SecaaS,Security as a Service
+VDE,Virtual Desktop Environment
+VDI,Virtual Desktop Infrastructure
+RAID,Redundant Array of Independent Disks
+LDAP,Lightweight Directory Access Protocol
+CHAP,Challenge Handshake Authentication Protocol
+PAP,Password Authentication Protocol
+MSCHAP,Microsoft CHAP
+SSO,Single Sign-On
+OAuth,Open Authorization
+MFA,Multi-Factor Authentication
+SAML,Security Assertion Markup Language
+ABAC,Attribute-Based Access Control
+CAC,Common Access Card
+DAC,Discretionary Access Control
+HOTP,HMAC-based one-time password
+TOTP,Time Based One Time Password
+MAC,Mandatory Access Control
+RBAC,Rule/Role Based Access Control
+BIA,Business Impact Analysis
+BCP,Business Continuity Plan
+COOP,Continuity of Operations Plan
+RPO,Recovery Point Objective
+RTO,Recovery Time Objective
+RTTO,Mean Time to Recovery
+MTTF,Mean Time to Failure
+MTBF,Mean Time Between Failures
+PIA,Privacy Impact Assessment
+PTA,Privacy Threshold Assessment
