@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+
+<head>
+  <title>Flashcard</title>
+  <link rel="stylesheet" href="css/startStyles.css">
+  <link rel="stylesheet" href="css/matchingStyle.css">
+  <link rel="stylesheet" href="css/typingStyle.css">
+  <link rel="stylesheet" href="css/survivalStyle.css">
+</head>
+
+<body>
+  <script src="js/start.js"></script>
+  <script src="js/matching.js"></script>
+  <script src="js/matching.js"></script>
+  <script src="js/matching.js"></script>
+
+<!-- ###### START MENU ###### -->
+<div class="startMenu" id="startMenu">
+    <h1>Placeholder</h1>
+    <div class="fileSubmition">
+      <a href="SecurityAcronyms.csv">Test File</a><br />
+      <p>Submit a file</p>
+      <input type="file" class="fileSubmit" onchange="readFile(this)">
+    </div>
+    <div class="gameChoice">
+      <p>Select Game Type</p>
+      <input type="radio" id="match" name="gameType"><label for="match">Matching</label>
+      <input type="radio" id="typing" name="gameType"><label for="typing">Typing</label>
+      <input type="radio" id="survival" name="gameType"><label for="survival">Survival</label>
+    </div>
+    <br />
+    <button onclick="initGame()" class="gameStart">Start Game</button>
+</div>
+
+
+<!-- ###### MATCHING GAME ####### -->
+<div class="matchingGame" id="matchingGame">
+  <h1 class="matchingQuestion" id="matchingQuestion"></h1>
+  <div class="matchingChoices">
+    <button class="matchingButton1" id="matchingButton1" onclick="checkButton1()"></button>
+    <button class="matchingButton2" id="matchingButton2" onclick="checkButton2()"></button><br />
+    <button class="matchingButton3" id="matchingButton3" onclick="checkButton3()"></button>
+    <button class="matchingButton4" id="matchingButton4" onclick="checkButton4()"></button>
+  </div>
+</div>
+
+
+<!-- ###### TYPING GAME ###### -->
+<div class="typingGame" id="typingGame">
+
+</div>
+
+
+<!-- ###### SURVIVAL GAME ###### -->
+<div class="survivalGame" id="survivalGame">
+
+</div>
+
+</body>
+
+</html>

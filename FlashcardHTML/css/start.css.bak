@@ -1,0 +1,63 @@
+.startMenu {
+  background-color: grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 50%;
+  border: 2px solid black;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 15px;
+  opacity: 1;
+  z-index: 2;
+}
+
+.startText {
+
+}
+
+.startText h1 {
+  position: relative;
+  top: 20px;
+}
+
+.startText p {
+  position: relative;
+  top: 30px;
+  font-size: 16px;
+}
+
+.fileSubmit {
+  position: relative;
+  top: 15px;
+  text-align-last: center;
+}
+
+.gameChoice {
+  position: relative;
+  top: 50px;
+  padding-bottom: 100px;
+}
+
+.gameStart {
+  background-color: rgb(255,0,0);
+  border: 2px solid black;
+  position: relative;
+  top: 50px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
+
+.gameStart:hover {
+  background-color: rgb(209,0,0);
+}
+
+.gameStart:active {
+  background-color: rgb(150,0,0);
+}

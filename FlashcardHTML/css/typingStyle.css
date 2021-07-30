@@ -1,0 +1,15 @@
+.typingGame {
+  background-color: grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 50%;
+  border: 2px solid black;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 15px;
+  visibility: hidden;
+  z-index: 1;
+}
