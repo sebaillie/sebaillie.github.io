@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html id="html">
 
 <head>
   <title>Flashcard</title>
@@ -13,25 +14,39 @@
 <body>
   <script src="js/start.js"></script>
   <script src="js/matching.js"></script>
-  <script src="js/matching.js"></script>
-  <script src="js/matching.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/survival.js"></script>
 
 <!-- ###### START MENU ###### -->
 <div class="startMenu" id="startMenu">
-    <h1>Placeholder</h1>
+    <h1>Flashcard</h1>
     <div class="fileSubmition">
       <a href="SecurityAcronyms.csv">Test File</a><br />
-      <p>Submit a file</p>
+      <p>Submit a File</p>
       <input type="file" class="fileSubmit" onchange="readFile(this)">
     </div>
     <div class="gameChoice">
       <p>Select Game Type</p>
       <input type="radio" id="match" name="gameType"><label for="match">Matching</label>
       <input type="radio" id="typing" name="gameType"><label for="typing">Typing</label>
-      <input type="radio" id="survival" name="gameType"><label for="survival">Survival</label>
+      <input type="radio" id="survival" name="gameType"><label for="survival">Hybrid</label>
     </div>
     <br />
     <button onclick="initGame()" class="gameStart">Start Game</button>
+    <div class="highScoreBox" id="highScoreBox">
+      <div class="matchingHighScoreBox" id="matchingHighScoreBox">
+        <h4 id="matchingHighScoreTitle">High Score<br>Matching</h4>
+        <h1 id="matchingHighScoreLabel">0</h1>
+      </div>
+      <div class="typingHighScoreBox" id="typingHighScoreBox">
+        <h4 id="typingHighScoreTitle">High Score<br>Typing</h4>
+        <h1 id="typingHighScoreLabel">0</h1>
+      </div>
+      <div class="survivalHighScoreBox" id="survivalHighScoreBox">
+        <h4 id="survivalHighScoreTitle">High Score<br>Hybrid</h4>
+        <h1 id="survivalHighScoreLabel">0</h1>
+      </div>
+    </div>
 </div>
 
 
@@ -40,22 +55,32 @@
   <h1 class="matchingQuestion" id="matchingQuestion"></h1>
   <div class="matchingChoices">
     <button class="matchingButton1" id="matchingButton1" onclick="checkButton1()"></button>
-    <button class="matchingButton2" id="matchingButton2" onclick="checkButton2()"></button><br />
+    <button class="matchingButton2" id="matchingButton2" onclick="checkButton2()"></button>
     <button class="matchingButton3" id="matchingButton3" onclick="checkButton3()"></button>
-    <button class="matchingButton4" id="matchingButton4" onclick="checkButton4()"></button>
+    <button class="matchingButton4" id="matchingButton4" onclick="checkButton4()"></button><br><br>
+    <button class="skipMatchingQuestion" id="skipMatchingQuestion" onclick="nextMatchingQuestion()">Skip</button>
+  </div>
+  <div class="matchingScoreBox" id="matchingScoreBox">
+    <h4>Score</h4>
+    <h1 id="matchingScoreLabel">0</h1>
   </div>
 </div>
 
 
 <!-- ###### TYPING GAME ###### -->
 <div class="typingGame" id="typingGame">
-
-</div>
-
-
-<!-- ###### SURVIVAL GAME ###### -->
-<div class="survivalGame" id="survivalGame">
-
+  <h1 class="typingQuestion" id="typingQuestion"></h1>
+  <h2 class="typingHint" id="typingHint"></h1>
+  <div class="typingInput">
+    <input type="text" id="typingAnswer" name="typingAnswer"><br><br>
+    <button class="typingSubmitButton" id="typingSubmitButton" onclick="typingSubmit()">Check</button>
+    <button class="typingShowAnswer" id="typingShowAnswer" onclick="showAnswer()">Show Answer</button>
+    <button class="skipTypingQuestion" id="skipTypingQuestion" onclick="nextTypingQuestion()">Skip</button>
+  </div>
+  <div class="typingScoreBox" id="typingScoreBox">
+    <h4>Score</h4>
+    <h1 id="typingScoreLabel">0</h1>
+  </div>
 </div>
 
 </body>

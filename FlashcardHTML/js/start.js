@@ -1,11 +1,33 @@
 let fileReader = new FileReader();
 let csvArray = [];
 let csvArrayLength = 0;
+let selectedGame;
+
+document.cookie = "matchingHighScore";
+document.cookie = "typingHighScore";
+document.cookie = "survivalHighScore";
+
+checkCookie("matchingHighScore");
+checkCookie("typingHighScore");
+checkCookie("survivalHighScore");
+
+function checkCookie(cookieName) {
+  if (!getCookie(cookieName)) {
+  document.getCookie = cookieName + "=0";
+  }
+}
+
+var matchingHighScore = parseInt(getCookie("matchingHighScore"));
+var typingHighScore = parseInt(getCookie("typingHighScore"));
+var survivalHighScore = parseInt(getCookie("survivalHighScore"));
+
+window.onload = function() {
+  document.getElementById("matchingHighScoreLabel").innerHTML = matchingHighScore;
+  document.getElementById("typingHighScoreLabel").innerHTML = typingHighScore;
+  document.getElementById("survivalHighScoreLabel").innerHTML = survivalHighScore;
+}
 
 // HIDES ALL WINDOWS EXCEPT FOR START MENU
-window.onload = function() {
-  document.getElementById("matchingGame").style.visibility = "hidden";
-}
 
 // READS FILE AND CREATES ARRAY USING getCSVfile()
 function readFile(input) {
@@ -41,10 +63,16 @@ function initGame() {
     if (document.getElementById("match").checked || document.getElementById("typing").checked || document.getElementById("survival").checked) {
       // starts selected game
       if (document.getElementById("match").checked) {
+        matchingScore = 0;
+        selectedGame = "matching";
         initMatchingGame();
       } else if (document.getElementById("typing").checked) {
+        typingScore = 0;
+        selectedGame = "typing";
         initTypingGame();
-      } else if (document.getElementById("match").checked) {
+      } else if (document.getElementById("survival").checked) {
+        survivalScore = 0;
+        selectedGame = "survival";
         initSurvivalGame();
       } else {
         alert("Error: Game not found.");
@@ -57,31 +85,50 @@ function initGame() {
   }
 }
 
-function fadeEffect(styleItem1, styleItem2, goToMenu) {
-  // creates the fade loop
-  let fadeEffect = setInterval(function () {
-    // creates the SHOWN menu opacity if it doesn't exist to 1
-    if (!styleItem1.opacity) {
-      styleItem1.opacity = 1;
+function fadeEffect2(item1, item2, goToMenu) {
+  var animationLoop = setInterval(function () {
+    if (!item1.opacity) {
+      item1.opacity = 1;
     }
-    // sets the HIDDEN menu opacity to 0
-    if (!styleItem2.opacity) {
-      styleItem2.opacity = 0;
+    if (item1.opacity > 0) {
+      item1.opacity -= 0.1;
     }
-    // creates fade OUT effect for first menu
-    if (styleItem1.opacity > 0) {
-      styleItem1.opacity -= 0.1;
-    } else {
-      styleItem1.visibility = "hidden";
-      // creates fade IN effect for second menu
-      styleItem2.visibility = "visible";
-      if (styleItem2.opacity < 1) {
-        // styleItem2.opacity += 0.1;
-        styleItem2.opacity = 1;
-      } else {
-        goToMenu();
-        clearInterval(fadeEffect);
-      }
+    if (item1.opacity <= 0) {
+      item1.visibility = "hidden";
+      item2.visibility = "visible";
+    }
+    if (item1.opacity <= 0 && !item2.opacity) {
+      item2.opacity = 0;
+    }
+    if (item1.opacity <= 0 && item2.opacity < 1) {
+      item2.opacity = 1;
+    }
+    if (item2.opacity == 1) {
+      goToMenu();
+      clearInterval(animationLoop);
     }
   }, 15);
+}
+
+function highScoreCheck(gameMode, currentScore, highScore) {
+  if (currentScore > highScore) {
+    highScore = currentScore;
+    document.cookie = gameMode + "=" + highScore;
+  }
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }

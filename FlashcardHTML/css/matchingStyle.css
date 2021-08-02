@@ -1,6 +1,8 @@
 .matchingGame {
   color: white;
   text-align: center;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .matchingGame h1 {
@@ -14,8 +16,9 @@
 .matchingChoices {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 300px;
   transform: translate(-50%, -50%);
+  width: 400px;
 }
 
 .matchingChoices button {
@@ -23,8 +26,16 @@
   background-color: rgb(255,0,0);
   border: 1px solid white;
   font-size: 16px;
-  width: 200px;
-  height: 80px;
+  height: 60px;
+  width: 250px;
+}
+
+.matchingChoices button:hover {
+  background-color: rgb(208,0,0);
+}
+
+.matchingChoices button:active {
+  background-color: rgb(158,0,0);
 }
 
 .nextMatching {
@@ -32,4 +43,16 @@
   left: 50%;
   top: 500px;
   transform: translate(-50%, -50%);
+}
+
+.matchingScoreBox {
+  border: 5px solid green;
+  text-align: center;
+  color: green;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 560px;
 }

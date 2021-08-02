@@ -17,7 +17,7 @@ function shuffleArray(array) {
 }
 
 function initMatchingGame() {
-  fadeEffect(document.getElementById("startMenu").style, document.getElementById("matchingGame").style, startMatchingGame);
+  fadeEffect2(document.getElementById("startMenu").style, document.getElementById("matchingGame").style, startMatchingGame);
 }
 
 // get initial random indexes
@@ -25,10 +25,10 @@ var index1, index2, index3, index4;
 var indexArray = [];
 
 function startMatchingGame() {
-  index1 = randNum(1, csvArrayLength); // WILL ALWAYS STAY THE SAME
-  index2 = randNum(1, csvArrayLength);
-  index3 = randNum(1, csvArrayLength);
-  index4 = randNum(1, csvArrayLength);
+  index1 = randNum(2, csvArrayLength); // WILL ALWAYS STAY THE SAME
+  index2 = randNum(2, csvArrayLength);
+  index3 = randNum(2, csvArrayLength);
+  index4 = randNum(2, csvArrayLength);
   indexArray = [index1, index2, index3, index4];
   // check if any indexes are the same
   for (i = 1; i < indexArray.length; i++) {
@@ -48,41 +48,52 @@ function startMatchingGame() {
 }
 
 function checkButton1() {
-  if (csvArray[indexArray[0]].Answer == csvArray[index1].Answer) {
-    console.log("Correct.");
-    matchingScore++;
-    startMatchingGame();
-  } else {
-    console.log("Incorrect.")
-  }
+  answerCheck(0);
 }
 
 function checkButton2() {
-  if (csvArray[indexArray[1]].Answer == csvArray[index1].Answer) {
-    console.log("Correct.");
-    matchingScore++;
-    startMatchingGame();
-  } else {
-    console.log("Incorrect.")
-  }
+  answerCheck(1);
 }
 
 function checkButton3() {
-  if (csvArray[indexArray[2]].Answer == csvArray[index1].Answer) {
-    console.log("Correct.");
-    matchingScore++;
-    startMatchingGame();
-  } else {
-    console.log("Incorrect.")
-  }
+  answerCheck(2);
 }
 
 function checkButton4() {
-  if (csvArray[indexArray[3]].Answer == csvArray[index1].Answer) {
-    console.log("Correct.");
-    matchingScore++;
+  answerCheck(3);
+}
+
+function nextMatchingQuestion() {
+  if (selectedGame == "matching") {
+    document.getElementById("matchingScoreLabel").innerHTML = matchingScore;
     startMatchingGame();
+  } else if (selectedGame == "survival") {
+    document.getElementById("matchingScoreLabel").innerHTML = survivalScore;
+    startSurvivalGame();
+  }
+}
+
+function answerCheck(index) {
+  if (csvArray[indexArray[index]].Answer == csvArray[index1].Answer) {
+    correctAnswerEffect();
+    if (selectedGame == "matching") {
+      matchingScore++;
+      document.getElementById("matchingScoreLabel").innerHTML = matchingScore;
+      highScoreCheck("matchingHighScore", matchingScore, matchingHighScore);
+    } else if (selectedGame == "survival") {
+      survivalScore++;
+      document.getElementById("matchingScoreLabel").innerHTML = survivalScore;
+      highScoreCheck("survivalHighScore", survivalScore, survivalHighScore);
+    }
+    nextMatchingQuestion();
   } else {
-    console.log("Incorrect.")
+    incorrectAnswerEffect();
+    if (selectedGame == "matching") {
+      matchingScore = 0;
+      document.getElementById("matchingScoreLabel").innerHTML = matchingScore;
+    } else if (selectedGame == "survival") {
+      survivalScore = 0;
+      document.getElementById("matchingScoreLabel").innerHTML = survivalScore;
+    }
   }
 }

@@ -1,15 +1,59 @@
 .typingGame {
-  background-color: grey;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 50%;
-  border: 2px solid black;
+  color: white;
   text-align: center;
-  vertical-align: middle;
-  border-radius: 15px;
+  opacity: 0;
   visibility: hidden;
-  z-index: 1;
+  width: 20%;
+}
+
+.typingQuestion {
+  font-size: 48px;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.typingHint {
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.typingInput {
+  position: absolute;
+  left: 50%;
+  top: 325px;
+  transform: translate(-50%, -50%);
+}
+
+.typingInput button {
+  color: white;
+  background-color: rgb(255,0,0);
+  border: 1px solid white;
+  font-size: 16px;
+  height: 60px;
+  width: 250px;
+}
+
+.typingInput button:hover {
+  background-color: rgb(208,0,0);
+}
+
+.typingInput button:active {
+  background-color: rgb(158,0,0);
+}
+
+.typingScoreBox {
+  border: 5px solid green;
+  text-align: center;
+  color: green;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 560px;
 }
